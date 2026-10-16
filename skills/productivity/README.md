@@ -18,3 +18,4 @@ Model- or user-reachable (rich trigger phrasing so the model can reach for them)
 
 - **[grilling](./grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved.
 - **[writing-for-agents](./writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
+- **[yc-application](./yc-application/SKILL.md)**: Draft a ready-to-submit Y Combinator application from your real facts, with a founder video script and a self-review.

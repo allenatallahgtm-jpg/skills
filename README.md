@@ -229,3 +229,4 @@ General workflow tools, not code-specific.
 
 - **[grilling](./skills/productivity/grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. The reusable interview primitive behind `grill-me`, `grill-with-docs`, `triage`, `wayfinder` and `improve-codebase-architecture`.
 - **[writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
+- **[yc-application](./skills/productivity/yc-application/SKILL.md)**: Draft a ready-to-submit Y Combinator application from your real facts: every form section, a 1-minute founder video script, and a self-review. It never invents traction; gaps become marked placeholders.
