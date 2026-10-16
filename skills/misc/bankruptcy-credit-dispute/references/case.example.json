@@ -1,0 +1,129 @@
+{
+  "signer": "attorney",
+  "attorney": {
+    "name": "Jane Attorney",
+    "firm": "Example Law Group, PC",
+    "address": "100 Main Street, Suite 200",
+    "city_state_zip": "Springfield, IL 62701",
+    "phone": "(555) 555-0100",
+    "email": "jane@example-law.test",
+    "bar": "IL 0000000"
+  },
+  "client": {
+    "name": "John Q. Client",
+    "aliases": ["John Client"],
+    "dob": "01/01/1980",
+    "ssn_last4": "1234",
+    "address": "200 Elm Street, Springfield, IL 62702",
+    "phone": "(555) 555-0199",
+    "email": "john@example.test"
+  },
+  "state": "Illinois",
+  "mail_date": "2026-10-20",
+  "bankruptcy_court_record": {
+    "debtor_name": "John Q. Client",
+    "chapter": "7",
+    "case_number": "1:19-bk-04567",
+    "district": "Central District of Illinois",
+    "filing_date": "2019-03-14",
+    "disposition": "discharged",
+    "disposition_date": "2019-06-20",
+    "scheduled_creditors": [
+      {"name": "Capital Card Bank", "account_last4": "9876"},
+      {"name": "Auto Finance Co", "account_last4": "5555"},
+      {"name": "Old Store Card", "account_last4": "2222"},
+      {"name": "Dept of Education", "account_last4": "1111"}
+    ],
+    "excluded_from_discharge": [
+      {"creditor": "Dept of Education", "account_last4": "1111", "reason": "student loan - non-dischargeable absent adversary proceeding"}
+    ]
+  },
+  "credit_reports": {
+    "equifax": {
+      "report_number": "EQ-0000001",
+      "report_date": "2026-10-01",
+      "report_source": "annual_free",
+      "public_record": {
+        "name": "John Q Client", "ssn_last4": "1234", "chapter": "7",
+        "case_number": "19-04567", "court": "US Bkpt Ct IL Central",
+        "filing_date": "2019-03-14", "status": "Discharged", "status_date": "2019-06-20"
+      },
+      "tradelines": [
+        {"creditor": "Capital Card Bank", "account_last4": "9876", "status": "Charge-off", "balance": "2,340", "past_due": "2,340",
+         "date_opened": "2012-05-01", "furnisher_address": "Capital Card Bank\nAttn: Credit Bureau Disputes\nP.O. Box 0000\nCity, ST 00000"},
+        {"creditor": "Midland Debt Buyers", "account_last4": "4321", "original_creditor": "Capital Card Bank", "status": "Collection",
+         "balance": "2,340", "past_due": "2,340", "date_opened": "2018-11-01"},
+        {"creditor": "Old Store Card", "account_last4": "2222", "status": "Included in bankruptcy", "balance": "0", "past_due": "0",
+         "date_opened": "2010-02-01", "date_of_first_delinquency": "2018-09-01"},
+        {"creditor": "Dept of Education", "account_last4": "1111", "status": "Current", "balance": "18,000", "past_due": "0"}
+      ]
+    },
+    "experian": {
+      "report_number": "EX-0000002",
+      "report_source": "paid",
+      "public_record": [
+        {"name": "John Q Client", "chapter": "13", "case_number": "19-04567",
+         "filing_date": "2019-03-14", "status": "Discharged", "status_date": "2019-06-20"}
+      ],
+      "tradelines": [
+        {"creditor": "Auto Finance Co", "account_last4": "5555", "status": "Discharged in bankruptcy", "balance": "0", "past_due": "0",
+         "late_payments_after_petition": []}
+      ]
+    },
+    "transunion": {
+      "report_number": "TU-0000003",
+      "report_source": "other",
+      "public_record": null,
+      "tradelines": []
+    },
+    "innovis": {
+      "report_number": "IN-0000004",
+      "public_record": {
+        "name": "John Q Client", "chapter": "7", "case_number": "19-04567", "filing_date": "2019-03-14",
+        "status": "Filed", "source": "LexisNexis Risk Solutions"
+      },
+      "tradelines": []
+    }
+  },
+  "bureau_responses": {
+    "equifax": {
+      "original_mail_date": "2026-10-20",
+      "original_tracking": "9400 0000 0000 0000 0001",
+      "received_date": "2026-10-24",
+      "extended": false,
+      "response_date": "2026-11-15",
+      "procedure_described": false,
+      "items": [
+        {"item": "Capital Card Bank 9876", "result": "verified"},
+        {"item": "Old Store Card 2222", "result": "reinserted", "deleted_date": "2026-11-15",
+         "reinserted_date": "2026-12-01", "reinsertion_notice_date": null}
+      ]
+    },
+    "experian": {
+      "original_mail_date": "2026-10-20",
+      "original_tracking": "9400 0000 0000 0000 0002",
+      "response_date": null
+    },
+    "innovis": {
+      "original_mail_date": "2026-10-20",
+      "original_tracking": "9400 0000 0000 0000 0004",
+      "response_date": "2026-11-20",
+      "procedure_described": false,
+      "items": [
+        {"item": "public_record", "result": "verified", "source": "LexisNexis Risk Solutions"}
+      ]
+    }
+  },
+  "options": {
+    "assert_unverifiable": false,
+    "include_chapter13_policy": true,
+    "not_client_record_confirmed": false,
+    "other_grounds": {},
+    "request_disclosure": false,
+    "identity_theft_confirmed": false,
+    "ftc_report_number": null,
+    "identity_theft_accounts": [],
+    "dispute_vendor": false,
+    "assert_post_petition_lates": false
+  }
+}
