@@ -1,0 +1,3 @@
+interface:
+  display_name: "YC Application"
+  short_description: "Draft a YC application from your real facts"
